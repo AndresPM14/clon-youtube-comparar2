@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Clone HTML5 + CSS</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background-color:#f1f1f1;
+        }
+
+        /* BARRA SUPERIOR */
+
+        .header{
+            width:100%;
+            height:70px;
+            background-color:white;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            padding:0 20px;
+            border-bottom:1px solid #ccc;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:1000;
+        }
+
+        .logo{
+            display:flex;
+            align-items:center;
+            gap:20px;
+        }
+
+        .logo h1{
+            color:red;
+            font-size:40px;
+        }
+
+        .search-bar{
+            width:50%;
+            display:flex;
+        }
+
+        .search-bar input{
+            width:85%;
+            height:40px;
+            padding-left:10px;
+            border:1px solid #ccc;
+            font-size:16px;
+        }
+
+        .search-bar button{
+            width:80px;
+            border:none;
+            background-color:#e5e5e5;
+            cursor:pointer;
+        }
+
+        .profile{
+            font-size:20px;
+            font-weight:bold;
+        }
+
+        /* CONTENEDOR GENERAL */
+
+        .container{
+            display:flex;
+            margin-top:70px;
+        }
+
+        /* SIDEBAR */
+
+        .sidebar{
+            width:15%;
+            height:100vh;
+            background-color:white;
+            border-right:1px solid #ccc;
+            padding-top:20px;
+            position:fixed;
+        }
+
+        .sidebar h3{
+            padding:15px 20px;
+            cursor:pointer;
+        }
+
+        .sidebar h3:hover{
+            background-color:#f0f0f0;
+        }
+
+        /* CONTENIDO */
+
+        .content{
+            width:85%;
+            margin-left:15%;
+            padding:20px;
+        }
+
+        /* CATEGORIAS */
+
+        .categories{
+            width:100%;
+            background-color:white;
+            padding:15px;
+            border:1px solid #ccc;
+            margin-bottom:20px;
+        }
+
+        .categories button{
+            padding:10px 15px;
+            margin-right:10px;
+            border:none;
+            background-color:#e5e5e5;
+            cursor:pointer;
+            border-radius:20px;
+        }
+
+        .categories button:hover{
+            background-color:#d5d5d5;
+        }
+
+        /* VIDEOS */
+
+        .videos{
+            display:flex;
+            flex-wrap:wrap;
+            gap:20px;
+        }
+
+        .video-card{
+            width:31%;
+            background-color:white;
+            border:1px solid #ccc;
+            transition:0.3s;
+        }
+
+        .video-card:hover{
+            transform:scale(1.02);
+        }
+
+        .video-card img{
+            width:100%;
+        }
+
+        .video-info{
+            padding:15px;
+        }
+
+        .video-info h3{
+            margin-bottom:10px;
+        }
+
+        .video-info p{
+            margin-bottom:8px;
+            color:#555;
+        }
+
+        /* FOOTER */
+
+        footer{
+            width:100%;
+            background-color:#202020;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:30px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <div class="header">
+
+        <div class="logo">
+
+            <h1>☰</h1>
+
+            <h1>YouTube</h1>
+
+        </div>
+
+        <div class="search-bar">
+
+            <input type="text" placeholder="Buscar">
+
+            <button>Buscar</button>
+
+        </div>
+
+        <div class="profile">
+
+            Mi Perfil
+
+        </div>
+
+    </div>
+
+    <!-- CONTENEDOR -->
+
+    <div class="container">
+
+        <!-- SIDEBAR -->
+
+        <div class="sidebar">
+
+            <h3>🏠 Inicio</h3>
+            <h3>🎬 Shorts</h3>
+            <h3>📺 Suscripciones</h3>
+            <h3>🕒 Historial</h3>
+            <h3>🎵 Música</h3>
+            <h3>💻 Programación</h3>
+            <h3>🎮 Gaming</h3>
+            <h3>📰 Noticias</h3>
+
+        </div>
+
+        <!-- CONTENIDO -->
+
+        <div class="content">
+
+            <!-- CATEGORIAS -->
+
+            <div class="categories">
+
+                <button>Todos</button>
+                <button>Música</button>
+                <button>Gaming</button>
+                <button>Programación</button>
+                <button>Noticias</button>
+                <button>Podcasts</button>
+                <button>En vivo</button>
+
+            </div>
+
+            <!-- VIDEOS -->
+
+            <div class="videos">
+
+                <!-- VIDEO 1 -->
+
+                <div class="video-card">
+
+                    <img src="https://picsum.photos/500/280?1">
+
+                    <div class="video-info">
+
+                        <h3>Aprende HTML desde cero</h3>
+
+                        <p>Canal Programación</p>
+
+                        <p>120K vistas • hace 2 días</p>
+
+                    </div>
+
+                </div>
+
+                <!-- VIDEO 2 -->
+
+                <div class="video-card">
+
+                    <img src="https://picsum.photos/500/280?2">
+
+                    <div class="video-info">
+
+                        <h3>Top canciones 2026</h3>
+
+                        <p>Canal Música</p>
+
+                        <p>980K vistas • hace 1 semana</p>
+
+                    </div>
+
+                </div>
+
+                <!-- VIDEO 3 -->
+
+                <div class="video-card">
+
+                    <img src="https://picsum.photos/500/280?3">
+
+                    <div class="video-info">
+
+                        <h3>Gameplay competitivo</h3>
+
+                        <p>Canal Gaming</p>
+
+                        <p>450K vistas • hace 3 días</p>
+
+                    </div>
+
+                </div>
+
+                <!-- VIDEO 4 -->
+
+                <div class="video-card">
+
+                    <img src="https://picsum.photos/500/280?4">
+
+                    <div class="video-info">
+
+                        <h3>Noticias tecnológicas</h3>
+
+                        <p>Canal Tech</p>
+
+                        <p>75K vistas • hace 5 horas</p>
+
+                    </div>
+
+                </div>
+
+                <!-- VIDEO 5 -->
+
+                <div class="video-card">
+
+                    <img src="https://picsum.photos/500/280?5">
+
+                    <div class="video-info">
+
+                        <h3>Podcast de Inteligencia Artificial</h3>
+
+                        <p>Canal AI</p>
+
+                        <p>210K vistas • hace 4 días</p>
+
+                    </div>
+
+                </div>
+
+                <!-- VIDEO 6 -->
+
+                <div class="video-card">
+
+                    <img src="https://picsum.photos/500/280?6">
+
+                    <div class="video-info">
+
+                        <h3>Curso completo de VS Code</h3>
+
+                        <p>Canal Desarrollo</p>
+
+                        <p>300K vistas • hace 1 mes</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    
+
+</body>
+
+</html>
